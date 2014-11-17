@@ -57,7 +57,7 @@
       time = new Date(time.setMinutes(time.getMinutes() + settings.step));
     }
 
-    var $tpDiv = $('<div class="timePicker"></div>');
+    var $tpDiv = $('<div class="timePicker__dropdown"></div>');
     var $tpListWrapper = $('<div class="time-picker'+ (settings.show24Hours ? '' : ' time-picker-12hours') +'"></div>');
     var $tpList = $('<ul></ul>');
 
