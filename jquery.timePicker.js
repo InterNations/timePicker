@@ -57,14 +57,17 @@
       time = new Date(time.setMinutes(time.getMinutes() + settings.step));
     }
 
-    var $tpDiv = $('<div class="time-picker'+ (settings.show24Hours ? '' : ' time-picker-12hours') +'"></div>');
+    var $tpDiv = $('<div class="timePicker"></div>');
+    var $tpListWrapper = $('<div class="time-picker'+ (settings.show24Hours ? '' : ' time-picker-12hours') +'"></div>');
     var $tpList = $('<ul></ul>');
 
     // Build the list.
     for(var i = 0; i < times.length; i++) {
       $tpList.append("<li>" + times[i] + "</li>");
     }
-    $tpDiv.append($tpList);
+
+    $tpListWrapper.append($tpList);
+    $tpDiv.append($tpListWrapper);
     // Append the timPicker to the body and position it.
     $tpDiv.appendTo('body').hide();
 
